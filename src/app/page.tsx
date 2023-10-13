@@ -26,7 +26,7 @@ const Main_Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="site-layout" >
         {children}
       </div>
-      <NavFooter />
+      {/* <NavFooter /> */}
     </div >
   )
 };

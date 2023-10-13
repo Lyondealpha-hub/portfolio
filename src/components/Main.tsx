@@ -1,3 +1,5 @@
+'use client'
+
 // fonts 
 import { Sora } from "next/font/google";
 
@@ -13,13 +15,28 @@ import Nav from "./Nav";
 import Header from "./Header";
 import Footer from "./footer";
 import NavFooter from "./footer";
-import React from 'react'
+// import React from 'react'
 import TopLeftImg from "./TopLeftImg";
+import { Transition } from '@/components/Transition'
+import { AnimatePresence, motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
+
+
 
 
 const Main_Layout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+  
   return (
-    <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative}`}>
+    <div>
+      <AnimatePresence mode='wait'>
+          <motion.div key={pathname} className='h-full'>
+            <Transition />
+          </motion.div>
+
+        </AnimatePresence>
+
+      <div className={`page bg-site text-black bg-cover bg-no-repeat ${sora.variable} font-sora relative}`}>
       <TopLeftImg />
       <Nav />
       <Header />
@@ -29,6 +46,7 @@ const Main_Layout = ({ children }: { children: React.ReactNode }) => {
       </div>
       <NavFooter />
     </div >
+    </div>
   )
 };
 
