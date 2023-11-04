@@ -10,23 +10,13 @@ const sora = ({
 
 //components
 import React from "react";
-import Header from "@/components/Header";
-import Nav from "@/components/Nav";
-import TopLeftImg from "@/components/TopLeftImg";
-import NavFooter from "@/components/footer";
-
 
 const Main_Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={`page bg-site text-white bg-cover  bg-no-repeat ${sora.variable} font-sora relative}`}>
-      <TopLeftImg />
-      <Nav />
-      <Header />
-
-      <div className="site-layout" >
+    <div className={`page bg-white bg-cover  bg-no-repeat ${sora.variable} font-sora relative}`}>
+      <div className="site-layout bg-white" >
         {children}
       </div>
-      {/* <NavFooter /> */}
     </div >
   )
 };

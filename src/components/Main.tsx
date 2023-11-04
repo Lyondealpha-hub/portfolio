@@ -26,26 +26,26 @@ import { usePathname } from 'next/navigation'
 
 const Main_Layout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  
+
   return (
     <div>
       <AnimatePresence mode='wait'>
-          <motion.div key={pathname} className='h-full'>
-            <Transition />
-          </motion.div>
+        <motion.div key={pathname} className='h-full'>
+          <Transition />
+        </motion.div>
 
-        </AnimatePresence>
+      </AnimatePresence>
 
-      <div className={`page bg-site text-black bg-cover bg-no-repeat ${sora.variable} font-sora relative}`}>
-      <TopLeftImg />
-      <Nav />
-      <Header />
+      <div className={`page bg-white text-black bg-cover bg-no-repeat ${sora.variable} font-sora relative}`}>
+        <TopLeftImg />
+        <Nav />
+        <Header />
 
-      <div className="site-layout" >
-        {children}
-      </div>
-      <NavFooter />
-    </div >
+        <div className="site-layout bg-white" >
+          {children}
+        </div>
+        <NavFooter />
+      </div >
     </div>
   )
 };
