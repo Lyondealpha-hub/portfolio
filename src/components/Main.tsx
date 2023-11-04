@@ -39,7 +39,7 @@ const Main_Layout = ({ children }: { children: React.ReactNode }) => {
       <div className={`page bg-white text-black bg-cover bg-no-repeat ${sora.variable} font-sora relative}`}>
         <TopLeftImg />
         <Nav />
-        <Header />
+        {/* <Header /> */}
 
         <div className="site-layout bg-white" >
           {children}

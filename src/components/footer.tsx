@@ -23,7 +23,7 @@ const currentYear = new Date().getFullYear();
 
 export default function NavFooter() {
   return (
-    <footer className="relative w-full mt-5 bg">
+    <footer className="hidden xl:flex relative w-full mt-5 bg">
 
       <div className=" w-full max-w-7xl mt-2 ">
 
