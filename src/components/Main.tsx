@@ -36,15 +36,15 @@ const Main_Layout = ({ children }: { children: React.ReactNode }) => {
 
       </AnimatePresence>
 
-      <div className={`page bg-white text-black bg-cover bg-no-repeat ${sora.variable} font-sora relative}`}>
+      <div className={`w-full h-screen  text-black  ${sora.variable} font-sora relative}`}>
         <TopLeftImg />
         <Nav />
         {/* <Header /> */}
 
-        <div className="site-layout bg-white" >
+        <div className=" " >
           {children}
         </div>
-        <NavFooter />
+        {/* <NavFooter /> */}
       </div >
     </div>
   )
