@@ -20,6 +20,7 @@ import TopLeftImg from "./TopLeftImg";
 import { Transition } from '@/components/Transition'
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import Typography from "@material-tailwind/react/components/Typography";
 
 
 
@@ -37,14 +38,26 @@ const Main_Layout = ({ children }: { children: React.ReactNode }) => {
       </AnimatePresence>
 
       <div className={`w-full h-screen  text-black  ${sora.variable} font-sora relative}`}>
-        <TopLeftImg />
-        <Nav />
-        {/* <Header /> */}
+        <ul className="flex list-none">
+          <li className="w-[15%]"><TopLeftImg /></li>
+          <li className="w-[85%]"><Header /></li>
+        </ul>
 
-        <div className=" " >
+        <Nav />
+
+        <div className="w-full " >
           {children}
         </div>
-        {/* <NavFooter /> */}
+
+        <div className="hidden xl:bottom-0 xl:inset-0 xl:flex xl:h-28 justify-start items-end px-5">
+          <Typography
+            variant="small"
+            className=" text-white  font-normal"
+          >
+            &copy; {2023} <a href="#">Misbahu Ahmed</a>. All
+            Rights Reserved.
+          </Typography>
+        </div>
       </div >
     </div>
   )
